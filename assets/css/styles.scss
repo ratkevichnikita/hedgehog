@@ -47,12 +47,45 @@ $a45: 2.344vw;
   position: relative;
   background-color: $subcolor;
   padding-bottom: 100px;
+  &__inner {
+    transition: 0.3s;
+  }
+  &.sticky {
+    padding-top: 9.698vw;
+    .header__inner {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      background-color: #fff;
+    }
+    .header__top {
+      padding-top: 1vw;
+      padding-bottom: 1vw;
+    }
+    .header__logo {
+      width: 5vw;
+    }
+    .header__contact-us {
+      margin-right: 0.479vw;
+      &:before {
+        opacity: 0;
+      }
+    }
+    .languages {
+      border: 1px solid $mainColor;
+    }
+  }
   &__logo {
     width: 8.073vw;
+    transition: 0.3s;
   }
   &__top {
     padding-top: 4.167vw;
     display: flex;
+    transition: 0.3s;
+    padding-bottom: 1vw;
   }
   .word {
     width: 100%;
@@ -101,11 +134,20 @@ $a45: 2.344vw;
         cursor: pointer;
         transition: 0.3s;
         z-index: 5;
+        &:hover:before {
+          opacity: 1;
+        }
+        &.active:hover > a {
+          color: $subcolor;
+        }
         &:hover > a {
           color: $subcolor;
         }
-        &:hover:before {
+        &.active:before {
           opacity: 1;
+        }
+        &.active > a {
+          color: $subcolor;
         }
         &::before {
           content: '';
@@ -155,6 +197,7 @@ $a45: 2.344vw;
     border-radius: $a45;
     position: relative;
     margin-right: -$a10;
+    transition: 0.3s;
     &:before {
       @include button-border;
     }
@@ -266,6 +309,12 @@ $a45: 2.344vw;
   align-items: center;
   font-weight: 700;
   gap: 0.25vw;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  > img {
+    width: 0.781vw;
+    height: 0.417vw;
+  }
 }
 
 // ----- Languages - end -----
@@ -284,7 +333,7 @@ span.bold {
 //------ SOLUTION SECTION - START -----
 
 .solutions {
-  padding: 6.208vw 0 5.208vw;
+  padding: 8.333vw 0 7.813vw;
   position: relative;
   margin-top: -3vw;
   background: url('../images/bg-gray.webp') no-repeat 50% 17% / cover;
@@ -397,13 +446,13 @@ span.bold {
 //------ ADVANATAGES SECTION - START -----
 
 .advantages {
-  padding: 5.208vw 0 5.208vw;
+  padding: 7.813vw 0 7.813vw;
   position: relative;
   margin-top: -3vw;
   background: url('../images/bg-blue.webp') no-repeat 50% 0% / cover;
   h2 {
     color: $mainColor;
-    margin-bottom: 28.646vw ;
+    margin-bottom: 25.646vw ;
   }
   &__content {
     display: flex;
@@ -542,7 +591,7 @@ span.bold {
 
 .geography {
   position: relative;
-  padding: 9.208vw 0 8.208vw;
+  padding: 8.906vw 0 7.656vw;
   margin-top: -4vw;
   background: url('../images/geography-bg.webp') no-repeat 50% 17% / cover ;
   &__content {
@@ -646,7 +695,7 @@ span.bold {
     height: 25.781vw;
     position: absolute;
     right: 0;
-    top: 3vw;
+    top: 6vw;
   }
 }
 
@@ -655,7 +704,7 @@ span.bold {
 //------ TEAM SECTION - START -----
 
 .team {
-  padding: 5.348vw 0 5.208vw;
+  padding: 7.813vw 0 9.473vw;
   position: relative;
   margin-top: -3vw;
   background: url('../images/bg-pink.webp') no-repeat 50% 0% / cover;
@@ -697,7 +746,7 @@ span.bold {
 .contacts {
   position: relative;
   overflow: hidden;
-  padding: 8.208vw 0 8.208vw;
+  padding: 8.908vw 0 8.008vw;
   margin-top: -4vw;
   background: url('../images/bg-green.webp') no-repeat 50% 0% / cover ;
   &__img {
@@ -707,7 +756,7 @@ span.bold {
     width: 148.438vw;
     height: 82.656vw;
     z-index: 1;
-    transform: translateY(20%);
+    transform: translateY(12vw);
   }
   h2 {
     font-size: 5.421vw;
@@ -817,7 +866,7 @@ span.bold {
 .footer {
   position: relative;
   overflow: hidden;
-  padding: 8.208vw 0 0;
+  padding: 11.708vw 0 0;
   margin-top: -4vw;
   background: url('../images/bg-black.webp') no-repeat 50% 0% / cover ;
   z-index: 10;
