@@ -1,0 +1,708 @@
+@import "global.scss";
+
+//Variables
+$mainColor: #F580F7;
+$subcolor: #543EFA;
+$green: #BEF941;
+$a10: 0.521vw;
+$a30: 1.563vw;
+$a45: 2.344vw;
+
+@mixin button-border {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border: 3px solid $subcolor;
+  transform: translate(-50%, -50%);
+  border-radius: 2.344vw;
+}
+
+.transparent-text-maincolor-border {
+  color: transparent; 
+  -webkit-text-stroke: 1px $mainColor;
+  text-stroke: 1px $mainColor; 
+}
+
+.transparent-text-subcolor-border {
+  color: transparent; 
+  -webkit-text-stroke: 1px $subcolor;
+  text-stroke: 1px $subcolor; 
+}
+
+.page-title {
+  line-height: 0.9em;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
+//----- Hero screen - start -------
+.header {
+  position: relative;
+  background-color: $subcolor;
+  padding-bottom: 100px;
+  &__logo {
+    width: 8.073vw;
+  }
+  &__top {
+    padding-top: 4.167vw;
+    display: flex;
+  }
+  .word {
+    width: 100%;
+    text-align: center;
+    font-size: 15.521vw;
+    font-weight: 700;
+    color: #4733DC;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    bottom: -1.302vw;
+    line-height: 0.8em;
+  }
+  .bg-line {
+    width: 100%;
+    height: 82px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateY(30%);
+  }
+  &__top {
+    display: flex;
+   
+    justify-content: space-between;
+  }
+  &__el {
+    display: flex;
+    align-items: center;
+    gap: 4.948vw;
+    height: 100%;
+  }
+  &__nav {
+    border: 1px solid $mainColor;
+    padding: 0.781vw $a30;
+    height: 100%;
+    border-radius: $a30;
+    font-family: 'Cera Pro', sans-serif;
+    ul {
+      display: flex;
+      gap: $a30;
+      li {
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 5;
+        &:hover > a {
+          color: $subcolor;
+        }
+        &:hover:before {
+          opacity: 1;
+        }
+        &::before {
+          content: '';
+          height: 2.019vw;
+          width: calc(100% + 2.363vw);
+          display: block;
+          position: absolute;
+          background-color: $mainColor;
+          pointer-events: none;
+          border-radius: $a30;
+          transition: 0.3s;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          opacity: 0;
+        }
+        > a {
+          position: relative;
+          z-index: 3;
+          color: #F580F7;
+          font-size: 0.833vw;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: $a30;
+    &-inner {
+      display: flex;
+    }
+  }
+  &__contact-us {
+    font-family: 'Cera Pro', sans-serif;
+    color: $subcolor;
+    background-color: $mainColor;
+    font-size: 0.833vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: $a10 $a30;
+    border-radius: $a45;
+    position: relative;
+    margin-right: -$a10;
+    &:before {
+      @include button-border;
+    }
+  }
+  &__login {
+    font-family: 'Cera Pro', sans-serif;
+    color: $subcolor;
+    background-color: $green;
+    font-size: 0.833vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: $a10 $a30;
+    border-radius: $a45;
+  }
+}
+
+.offer {
+  position: relative;
+  padding: 3.204vw 0 11.021vw;
+  h1 {
+    font-weight: 600;
+    text-indent: 7.1vw;
+    line-height: 6.823vw;
+  }
+  .etherium-icon {
+    position: absolute;
+    left: 9.2vw;
+    top: 1.6vw;
+    z-index: 2;
+    width: 9.74vw;
+    height: 9.74vw;
+  }
+  .bitcoin-img {
+    width: 6.875vw;
+    height: 6.875vw;
+    position: absolute;
+    right: 19.5vw;
+    top: 10vw;
+    z-index: 2;
+  }
+  &__readmore {
+    background-color: $green;
+    border-radius: $a45;
+    padding: 0.781vw 2.344vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: $subcolor;
+    font-weight: 700;
+    font-size: 1.25vw;
+    position: absolute;
+    right: 17vw;
+    bottom: 11.5vw;
+    &:before {
+      @include button-border;
+      border: 7px solid $subcolor;
+    }
+  }
+  &__advanatges {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 14vw;
+    bottom: 8vw;
+    color: $subcolor;
+    font-size: 1.406vw;
+    transform: rotate(-3deg);
+    span {
+      font-weight: 700;
+      font-size: 2.031vw;
+    }
+    &-users {
+      position: relative;
+      background-color: $mainColor;
+      border-radius: 2.969vw;
+      padding: 0.281vw $a30;
+      &:before {
+        @include button-border;
+        border: 7px solid $subcolor;
+        border-radius: 2.969vw;
+      }
+    }
+    &-experiance {
+      position: relative;
+      background-color: $green;
+      border-radius: 2.969vw;
+      padding: 0.281vw  $a30;
+      transform: translateX(-12px);
+      &:before {
+        @include button-border;
+        border: 7px solid $subcolor;
+        border-radius: 2.969vw;
+      }
+    }
+  }
+}
+
+// ----- Languages - start -----
+
+.languages {
+  font-family: 'Cera Pro', sans-serif;
+  color: $subcolor;
+  text-transform: uppercase;
+  background:#fff;
+  border-radius: 2.344vw;
+  font-size: 0.833vw;
+  padding: $a10 $a30;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 0.25vw;
+}
+
+// ----- Languages - end -----
+
+//----- Hero screen - end -------
+
+span.color {
+  color: $mainColor;
+}
+
+span.bold {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+//------ SOLUTION SECTION - START -----
+
+.solutions {
+  padding: 6.208vw 0 5.208vw;
+  position: relative;
+  margin-top: -3vw;
+  background: url('../images/bg-gray.webp') no-repeat 50% 17% / cover;
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: rotate(180deg) translateY(-50%);
+  }
+  .page-title {
+    color: $subcolor;
+  }
+  .transparent-text {
+    font-size: 10.313vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 0.8em;
+    span {
+      display: block;
+      padding-left: 2vw;
+    }
+  }
+  &__content {
+    padding-top: 8.854vw;
+  }
+  &__item {
+    &-with-image {
+      &.betting {
+        position: absolute;
+        right: 0;
+        top: 33vw;
+      }
+      &.forex {
+        margin-left: -5.208vw;
+      }
+      &.online {
+        position: absolute;
+        right: 14.5vw;
+        bottom: 7.5vw;
+      }
+      &.mb-30 {
+        margin-bottom: 3.646vw;
+      }
+    }
+    &.mb-180 {
+      margin-bottom: 9.375vw;
+    }
+   
+    &.mb-230 {
+      margin-bottom: 11.979vw;
+    }
+    &-with-image-inner {
+      position: relative;
+      &.betting {
+        img {
+          width: 33.333vw;
+          height: 27.083vw;
+          position: absolute;
+          left: 2vw;
+          top: -17vw;
+        }
+      }
+      &.forex {
+        img {
+          width: 35.677vw;
+          height: 22.917vw;
+          position: absolute;
+          left: 0;
+          top: -20vw;
+        }
+      }
+      &.online {
+       img {
+        width: 30.625vw;
+        height: 23.229vw;
+        position: absolute;
+        left: 2vw;
+        top: -17vw;
+       }
+      }
+    }
+  }
+  &__header {
+    max-width: 33.431vw;
+    &.mr-5 {
+      margin-right: 5vw;
+    }
+    h3 {
+      color: $mainColor;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 0.8em;
+      margin-bottom: 2.083vw;
+    }
+    div {
+      > p {
+        color: #1D174A;
+        opacity: 0.7;
+        font-size: 0.938vw;
+        &:not(:last-child) {
+          margin-bottom: 1.563vw;
+        }
+      }
+    }
+  }
+}
+
+//------ SOLUTION SECTION - END -----
+
+//------ ADVANATAGES SECTION - START -----
+
+.advantages {
+  padding: 10.208vw 0 5.208vw;
+  position: relative;
+  margin-top: -3vw;
+  background: url('../images/bg-blue.webp') no-repeat 50% 50% / cover;
+  h2 {
+    color: $mainColor;
+    margin-bottom: 28.646vw ;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28.646vw 5.208vw;
+
+  }
+  &__item {
+    position: relative;
+    max-width: 33.438vw;
+    width: 100%;
+    &:nth-child(1) {
+      img {
+        width: 43.542vw;
+        height: 36.615vw;
+        position: absolute;
+        left: 0;
+        top: -72%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        width: 30.573vw;
+        height: 23.438vw;
+        position: absolute;
+        left: 0;
+        top: -100%;
+        transform: translateY(-50%);
+      }
+    }
+    &:nth-child(3) {
+      img {
+        width: 33.333vw;
+        height: 27.604vw;
+        position: absolute;
+        left: 3vw;
+        top: -9vw;
+        transform: translateY(-50%);
+      }
+    }
+    &:nth-child(4) {
+      img {
+        width: 31.927vw;
+        height: 22.917vw;
+        position: absolute;
+        left: 3vw;
+        top: -12vw;
+        transform: translateY(-50%);
+      }
+    }
+    &:nth-child(5) {
+      img {
+        width: 34.115vw;
+        height: 29.427vw;
+        position: absolute;
+        left: 0;
+        top: -11vw;
+        transform: translateY(-50%);
+      }
+    }
+    &:nth-child(6) {
+      img {
+        width: 25.521vw;
+        height: 31.25vw;
+        position: absolute;
+        left: 3vw;
+        top: -10vw;
+        transform: translateY(-50%);
+      }
+    }
+    h4 {
+      position: relative;
+      z-index: 5;
+      font-size: 2.604vw;
+      color: #EFEFEF;
+      font-weight: 600;
+      text-align: center;
+      line-height: 0.8em;
+      margin-bottom: 2.083vw;
+    }
+    p {
+      position: relative;
+      z-index: 5;
+      color: #BBB2FF;
+      font-size: 0.938vw;
+      text-align: center;
+    }
+  }
+}
+
+//------ ADVANATAGES SECTION - END -----
+
+//------ GEOGRAPHY SECTION - START -----
+
+.swiperGeography1 .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear;
+  will-change: transform;
+  animation: scroll 75s linear infinite;
+}
+
+.swiperGeography2 .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear;
+  will-change: transform;
+  animation: scrollReverse 35s linear infinite;
+}
+
+.swiperGeography3 .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear;
+  will-change: transform;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.geography {
+  position: relative;
+  padding: 9.208vw 0 8.208vw;
+  margin-top: -4vw;
+  background: url('../images/geography-bg.webp') no-repeat 50% 17% / cover ;
+  &__content {
+    .swiper-wrapper {
+      gap: 30px;
+    }
+    &.mb-30 {
+      margin-bottom: $a30;
+    }
+  }
+  &__item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.823vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.042vw 1.563vw;
+    line-height: 1em;
+    border-radius: 0.26vw;
+    flex-shrink: 0;
+    min-width: max-content;
+    &_pink {
+      color: $mainColor;
+      border: 2px solid $mainColor;
+    }
+    &_blue {
+      color: $subcolor;
+      border: 2px solid $subcolor;
+    }
+  }
+  &__title {
+    position: relative;
+    color: #fff;
+    max-width: 71.615vw;
+    width: 100%;
+    margin-bottom: 6.25vw;
+    padding-left: 4vw;
+    h2 {
+      text-align: left;
+      margin-bottom: 2.083vw;
+    }
+    p {
+      max-width: 33.333vw;
+      color: #BBB2FF;
+      font-size: 0.938vw;
+    }
+  }
+  &__box {
+    position: absolute;
+    right: 11vw;
+    bottom: 7vw;
+  }
+  &__button {
+    text-align: center;
+    position: relative;
+    width: 15.625vw;
+    height: 4.167vw;
+    color: #fff;
+    font-size: 1.667vw;
+    background-color: #F580F7;
+    text-transform: uppercase;
+    font-family: "Cera Pro", sans-serif;
+    font-weight: 600;
+    border-radius: 4.688vw;
+    padding: 0.96vw 0;
+    transform: rotate(-6deg) translateX(0%);
+    &:before {
+      @include button-border;
+      border: 7px solid #151529;
+      border-radius: 2.969vw;
+    }
+    img {
+      width: 14.844vw;
+      height: 4.485vw;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: rotate(5deg) translate(-51%, -35%);
+      object-fit: cover;
+    }
+    // &:after {
+    //   content: '';
+    //   width: 90%;
+    //   height: 90%;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   background: url('../images/dashed-border.svg') no-repeat 50% 50% / cover;
+    // }
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%)
+  }
+  &__image {
+    width: 22.396vw;
+    height: 25.781vw;
+    position: absolute;
+    right: 0;
+    top: 3vw;
+  }
+}
+
+//------ GEOGRAPHY SECTION - END -----
+
+//------ TEAM SECTION - START -----
+
+.team {
+  padding: 10.348vw 0 5.208vw;
+  position: relative;
+  margin-top: -3vw;
+  background: url('../images/bg-pink.webp') no-repeat 50% 50% / cover;
+  h2 {
+    text-align: center;
+    color: #EFEFEF;
+    margin-bottom: 4.688vw;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    gap: 5.208vw;
+    img {
+      width: 42.083vw;
+      height: 23.594vw;
+    }
+  }
+  &__info {
+    max-width: 33.438vw;
+    h3 {
+      color: #EFEFEF;
+      text-transform: uppercase;
+      line-height: 0.9em;
+      margin-bottom: 2.083vw;
+    }
+    p {
+      font-size: 0.938vw;
+      &:not(:last-child) {
+        margin-bottom: 1.042vw;
+      }
+    }
+  }
+}
+
+//------ TEAM SECTION - END -----
+
+//------ CONATCTS SECTION - START -----
+
+.contacts {
+  position: relative;
+  padding: 9.208vw 0 8.208vw;
+  margin-top: -4vw;
+  background: url('../images/geography-bg.webp') no-repeat 50% 17% / cover ;
+  
+}
+
+//------ CONATCTS SECTION - END -----
+
+
+@import "media.scss";
