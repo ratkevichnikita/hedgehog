@@ -1,6 +1,6 @@
 
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.header__nav ul li a');
+const navLinks = document.querySelectorAll('.go-to');
 
 navLinks.forEach(link => {
   link.addEventListener('click', function(event) {
@@ -41,5 +41,11 @@ window.addEventListener('scroll', () => {
   } 
   if(window.scrollY === 0) {
     headerInner.classList.remove('sticky');
+    
+  }
+  if(window.scrollY < 750) {
+    navLinks.forEach((link) => {
+      link.closest('LI').classList.remove('active');
+    });
   }
 });
