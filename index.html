@@ -367,26 +367,38 @@
     </div>
   </section>
   <section class="contacts">
+    <img class="contacts__img" src="./assets/images/hedgehog3.svg" alt="hedgehog">
     <div class="wrapper">
       <div class="contacts__container">
         <div class="contacts__content">
           <h2>Send Us A Message</h2>
           <div class="conatcts__form">
             <form action="">
-              <div class="conatctw__form-wrapper">
-                <div>
-                  <p>
-                    <input name="name" id="name" type="text">
-                    <label for="name"></label>
-                  </p>
+              <div class="contacts__form-wrapper">
+                <div class="contacts__form-item">
+                    <div class="contacts__form-row">
+                      <input class="contacts__form-field" placeholder="Enter your name" name="name" id="name" type="text">
+                      <label class="contacts__form-label" for="name">name</label>
+                    </div>
+                    <div class="contacts__form-row">
+                      <input class="contacts__form-field" placeholder="Enter your company" name="company" id="company" type="text">
+                      <label class="contacts__form-label" for="company">company</label>
+                    </div>
+                    <div class="contacts__form-row">
+                      <input class="contacts__form-field" placeholder="Enter your email" name="email" id="email" type="text">
+                      <label class="contacts__form-label" for="email">E-mail</label>
+                    </div>
                 </div>
-                <div>
-                  <textarea name="" id="">
-  
-                  </textarea>
+                <div class="contacts__form-item">
+                  <div class="contacts__form-row textarea">
+                    <textarea placeholder="Enter your message" name="text" class="contacts__form-field textarea" name="" id="">
+    
+                    </textarea>
+                    <span class="contacts__form-label" for="email">Message</span>
+                  </div>
                 </div>
               </div>
-              <button>Send</button>
+              <button class="contacts__form-button">Send</button>
             </form>
           </div>
         </div>
@@ -394,9 +406,57 @@
     </div>
   </section>
   <footer class="footer">
-
+    <div class="wrapper">
+      <p class="footer__text">For general requirments</p>
+      <a class="footer__mail" href="mailto:yoyo@hadge-hog.com">yoyo@hadge-hog.com</a>
+      <ul class="footer__menu">
+        <li>
+          <a href="#">
+            Solutions
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Advantages
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Geography
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            About us
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <span class="footer__word">hedgehog</span>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper">
+        <div class="footer__bottom-inner">
+          <p>© 2024 HEDGEHOG. All rights reserved.</p>
+          <a href="#" class="footer__logo">
+            <img src="./assets/images/icons/logo-pink.svg" alt="">
+          </a>
+          <div class="footer__bottom-row">
+            <p>AML/KYC / Terms of Service</p>
+            <div class="footer__bottom-payments">
+              <img src="./assets/images/icons/mc.svg" alt="master card">
+              <img src="./assets/images/icons/visa.svg" alt="visa">
+              <img src="./assets/images/icons/union.svg" alt="union pay">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

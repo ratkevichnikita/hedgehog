@@ -397,10 +397,10 @@ span.bold {
 //------ ADVANATAGES SECTION - START -----
 
 .advantages {
-  padding: 10.208vw 0 5.208vw;
+  padding: 5.208vw 0 5.208vw;
   position: relative;
   margin-top: -3vw;
-  background: url('../images/bg-blue.webp') no-repeat 50% 50% / cover;
+  background: url('../images/bg-blue.webp') no-repeat 50% 0% / cover;
   h2 {
     color: $mainColor;
     margin-bottom: 28.646vw ;
@@ -655,10 +655,10 @@ span.bold {
 //------ TEAM SECTION - START -----
 
 .team {
-  padding: 10.348vw 0 5.208vw;
+  padding: 5.348vw 0 5.208vw;
   position: relative;
   margin-top: -3vw;
-  background: url('../images/bg-pink.webp') no-repeat 50% 50% / cover;
+  background: url('../images/bg-pink.webp') no-repeat 50% 0% / cover;
   h2 {
     text-align: center;
     color: #EFEFEF;
@@ -696,13 +696,218 @@ span.bold {
 
 .contacts {
   position: relative;
-  padding: 9.208vw 0 8.208vw;
+  overflow: hidden;
+  padding: 8.208vw 0 8.208vw;
   margin-top: -4vw;
-  background: url('../images/geography-bg.webp') no-repeat 50% 17% / cover ;
-  
+  background: url('../images/bg-green.webp') no-repeat 50% 0% / cover ;
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    width: 148.438vw;
+    height: 82.656vw;
+    z-index: 1;
+    transform: translateY(20%);
+  }
+  h2 {
+    font-size: 5.421vw;
+    color: #BEF941;
+    text-align: center;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.083vw;
+  }
+  &__container {
+    padding: 5.629vw 0 ;
+    background-color: #151529;
+    border-radius: 1.042vw;
+    position: relative;
+    z-index: 2;
+  }
+  &__content {
+    max-width: 51.042vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__form {
+    
+    &-field {
+      border: 1px solid #4C4C72;
+      padding: 1.042vw 1.563vw;
+      font-size: 0.833vw;
+      color: #4C4C72;
+      border-radius: 0.25vw;
+      background: transparent;
+      box-sizing: border-box;
+      width: 100%;
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+        border: 1px solid #4C4C72;
+      }
+      &.textarea {
+        height: 100%;
+      }
+    }
+    &-item {
+      width: 100%;
+      max-width: 24.479vw;
+     
+    }
+    &-row {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 2.083vw;
+      }
+      &.textarea {
+        margin-bottom: 0;
+        height: 100%;
+      }
+    }
+    &-label {
+      position: absolute;
+      left: 1vw;
+      top: 0;
+      text-transform: uppercase;
+      color: #BEF941;
+      transform: translate(0%, -50%);
+      font-size: 0.833vw;
+      font-family: 'Cera pro', sans-serif;
+      &:before {
+        content: '';
+        background-color: #151529;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+        position: absolute;
+        padding: 0px 5px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 2.083vw;
+      margin-bottom: 2.604vw;
+    }
+    &-button {
+      font-family: 'Cera pro', sans-serif;
+      color: #BEF941;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+      border: 2px solid #BEF941;
+      border-radius: 3.646vw;
+      display: block;
+      width: 24.479vw;
+      padding: 0.781vw 0;
+      margin: 0 auto;
+      background: transparent;
+    }
+  }
 }
 
 //------ CONATCTS SECTION - END -----
+
+//------ FOOTER - START -------
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 8.208vw 0 0;
+  margin-top: -4vw;
+  background: url('../images/bg-black.webp') no-repeat 50% 0% / cover ;
+  z-index: 10;
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    color: $mainColor;
+    font-size: 0.938vw;
+    margin-bottom: 0.521vw;
+  }
+  &__mail {
+    font-size: 2.083vw;
+    color: #EFEFEF;
+    text-align: center;
+    margin-bottom: 5.208vw;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.604vw;
+    color: #EFEFEF;
+    font-family: 'Cera pro', sans-serif;
+    margin-bottom: 5.208vw;
+    li {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.833vw;
+      transition: 0.3s;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  &__word {
+    font-size: 15.052vw;
+    color: $mainColor;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 0.75em;
+    display: block;
+  }
+  &__logo {
+    width: 4.948vw;
+    height: 2.76vw;
+    transform: translateX(50%);
+  }
+  &__bottom {
+    background-color: $mainColor;
+    padding: 0.885vw 0;
+    margin-top: -3vw;
+    &-row {
+      display: flex;
+      align-items: center;
+      gap: 2.604vw;
+    }
+    &-payments {
+      display: flex;
+      align-items: center;
+      gap: $a10;
+      img {
+        &:nth-child(1) {
+          width: 2.396vw;
+          height: 1.406vw;
+        }
+        &:nth-child(2) {
+          width: 3.49vw;
+          height: 1.094vw;
+        }
+        &:nth-child(3) {
+          width: 2.396vw;
+          height: 1.406vw;
+        }
+      }
+    }
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        color: #AB27AD;
+        font-size: 0.781vw;
+      }
+    }
+  }
+}
+
+
+//------ FOOTER - END -------
 
 
 @import "media.scss";
