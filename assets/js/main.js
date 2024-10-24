@@ -101,3 +101,35 @@ if(menuBtn) {
 }
 
 // ------------------------------------------------
+
+
+// Функция для загрузки изображения
+function preloadImage(img) {
+  const src = img.getAttribute('data-src');
+  if (!src) {
+    return;
+  }
+  img.src = src;
+}
+
+
+const observerOptions = {
+  root: null, 
+  rootMargin: '100px', 
+  threshold: 0 
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      preloadImage(entry.target);
+      observer.unobserve(entry.target); 
+    }
+  });
+}, observerOptions);
+
+
+const lazyImages = document.querySelectorAll('img[data-src]');
+lazyImages.forEach(image => {
+  observer.observe(image);
+});
