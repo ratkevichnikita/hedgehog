@@ -124,7 +124,7 @@ body {
 .header {
   position: relative;
   background-color: #543EFA;
-  padding-bottom: 100px;
+  padding-bottom: 5.208vw;
 }
 .header__inner {
   transition: 0.3s;
@@ -152,9 +152,6 @@ body {
 }
 .header.sticky .header__contact-us:before {
   opacity: 0;
-}
-.header.sticky .languages {
-  border: 1px solid #F580F7;
 }
 .header__logo {
   width: 8.073vw;
@@ -300,6 +297,21 @@ body {
   padding: 0.521vw 1.563vw;
   border-radius: 2.344vw;
 }
+.header__burger {
+  display: none;
+  background: transparent;
+  padding: 0;
+}
+.header__burger span {
+  display: block;
+  width: 4.556vw;
+  height: 0.36vw;
+  background-color: #EFEFEF;
+  border-radius: 0.839vw;
+}
+.header__burger span:not(:last-child) {
+  margin-bottom: 0.839vw;
+}
 
 .offer {
   position: relative;
@@ -409,6 +421,11 @@ body {
 }
 
 .languages {
+  position: relative;
+  z-index: 5;
+}
+.languages__container {
+  position: relative;
   font-family: "Cera Pro", sans-serif;
   color: #543EFA;
   text-transform: uppercase;
@@ -422,10 +439,54 @@ body {
   gap: 0.25vw;
   border: 1px solid transparent;
   transition: 0.3s;
+  z-index: 2;
 }
-.languages > img {
+.languages__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #543EFA;
+  transform: translate(-50%, -50%);
+  border-radius: 2.344vw;
+}
+.languages__container > img {
   width: 0.781vw;
   height: 0.417vw;
+}
+.languages:hover ul {
+  opacity: 1;
+}
+.languages ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  transform: translateY(-35%);
+  background-color: #fff;
+  padding: 0.521vw 0.938vw;
+  padding-top: 2.5vw;
+  color: #543EFA;
+  border-radius: 0.5vw;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.languages ul li {
+  font-family: "Cera Pro", sans-serif;
+  font-size: 0.833vw;
+  text-transform: uppercase;
+  line-height: 0.9em;
+  transition: color 0.3s;
+}
+.languages ul li:not(:last-child) {
+  margin-bottom: 0.5vw;
+}
+.languages ul li:hover {
+  color: #F580F7;
 }
 
 span.color {
@@ -468,7 +529,7 @@ span.bold {
 .solutions__item-with-image.betting {
   position: absolute;
   right: 0;
-  top: 33vw;
+  top: 39vw;
 }
 .solutions__item-with-image.forex {
   margin-left: -5.208vw;
@@ -476,13 +537,16 @@ span.bold {
 .solutions__item-with-image.online {
   position: absolute;
   right: 14.5vw;
-  bottom: 7.5vw;
+  bottom: 9.5vw;
 }
 .solutions__item-with-image.mb-30 {
   margin-bottom: 3.646vw;
 }
 .solutions__item.mb-180 {
-  margin-bottom: 9.375vw;
+  margin-bottom: 10.375vw;
+}
+.solutions__item.mb-150 {
+  margin-bottom: 8.379vw;
 }
 .solutions__item.mb-230 {
   margin-bottom: 11.979vw;
@@ -606,6 +670,7 @@ span.bold {
 .advantages__item h4 {
   position: relative;
   z-index: 5;
+  text-transform: uppercase;
   font-size: 2.604vw;
   color: #EFEFEF;
   font-weight: 600;
@@ -880,7 +945,7 @@ span.bold {
   color: #BEF941;
   transform: translate(0%, -50%);
   font-size: 0.833vw;
-  font-family: "Cera pro", sans-serif;
+  font-family: "Cera Pro", sans-serif;
 }
 .contacts__form-label:before {
   content: "";
@@ -902,7 +967,7 @@ span.bold {
   margin-bottom: 2.604vw;
 }
 .contacts__form-button {
-  font-family: "Cera pro", sans-serif;
+  font-family: "Cera Pro", sans-serif;
   color: #BEF941;
   text-transform: uppercase;
   text-align: center;
@@ -943,7 +1008,7 @@ span.bold {
   justify-content: center;
   gap: 2.604vw;
   color: #EFEFEF;
-  font-family: "Cera pro", sans-serif;
+  font-family: "Cera Pro", sans-serif;
   margin-bottom: 5.208vw;
 }
 .footer__menu li {
@@ -1004,4 +1069,32 @@ span.bold {
 .footer__bottom-inner p {
   color: #AB27AD;
   font-size: 0.781vw;
+}
+
+@media screen and (max-width: 834px) {
+  .wrapper {
+    max-width: 91.727vw;
+  }
+  .header__top {
+    padding-top: 4.796vw;
+  }
+  .header__logo {
+    width: 13.189vw;
+    height: 7.434vw;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+  .languages {
+    padding: 1vw 3.597vw;
+    font-size: 1.918vw;
+    line-height: 0.9em;
+  }
+  .languages img {
+    width: 1.8vw;
+    height: 0.959vw;
+  }
 }/*# sourceMappingURL=styles.css.map */

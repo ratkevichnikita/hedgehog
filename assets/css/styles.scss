@@ -46,7 +46,7 @@ $a45: 2.344vw;
 .header {
   position: relative;
   background-color: $subcolor;
-  padding-bottom: 100px;
+  padding-bottom: 5.208vw;
   &__inner {
     transition: 0.3s;
   }
@@ -72,9 +72,6 @@ $a45: 2.344vw;
       &:before {
         opacity: 0;
       }
-    }
-    .languages {
-      border: 1px solid $mainColor;
     }
   }
   &__logo {
@@ -213,6 +210,21 @@ $a45: 2.344vw;
     padding: $a10 $a30;
     border-radius: $a45;
   }
+  &__burger {
+    display: none;
+    background: transparent;
+    padding: 0;
+    span {
+      display: block;
+      width: 4.556vw;
+      height: 0.36vw;
+      background-color: #EFEFEF;
+      border-radius: 0.839vw;
+      &:not(:last-child) {
+        margin-bottom: 0.839vw;;
+      }
+    }
+  }
 }
 
 .offer {
@@ -298,22 +310,62 @@ $a45: 2.344vw;
 // ----- Languages - start -----
 
 .languages {
-  font-family: 'Cera Pro', sans-serif;
-  color: $subcolor;
-  text-transform: uppercase;
-  background:#fff;
-  border-radius: 2.344vw;
-  font-size: 0.833vw;
-  padding: $a10 $a30;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  gap: 0.25vw;
-  border: 1px solid transparent;
-  transition: 0.3s;
-  > img {
-    width: 0.781vw;
-    height: 0.417vw;
+  position: relative;
+  z-index: 5;
+  &__container {
+    position: relative;
+    font-family: 'Cera Pro', sans-serif;
+    color: $subcolor;
+    text-transform: uppercase;
+    background:#fff;
+    border-radius: 2.344vw;
+    font-size: 0.833vw;
+    padding: $a10 $a30;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 0.25vw;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    z-index: 2;
+    &::before {
+      @include button-border;
+    }
+    > img {
+      width: 0.781vw;
+      height: 0.417vw;
+    }
+  }
+  &:hover ul {
+    opacity: 1;
+  }
+  ul {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    transform: translateY(-35%);
+    background-color: #fff;
+    padding: 0.521vw 0.938vw;
+    padding-top: 2.5vw;
+    color: $subcolor;
+    border-radius: 0.5vw;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    li {
+      font-family: 'Cera Pro', sans-serif;
+      font-size: 0.833vw;
+      text-transform: uppercase;
+      line-height: 0.9em;
+      transition: color 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 0.5vw;
+      }
+      &:hover {
+        color: $mainColor;
+      }
+    }
   }
 }
 
@@ -364,7 +416,7 @@ span.bold {
       &.betting {
         position: absolute;
         right: 0;
-        top: 33vw;
+        top: 39vw;
       }
       &.forex {
         margin-left: -5.208vw;
@@ -372,16 +424,18 @@ span.bold {
       &.online {
         position: absolute;
         right: 14.5vw;
-        bottom: 7.5vw;
+        bottom: 9.5vw;
       }
       &.mb-30 {
         margin-bottom: 3.646vw;
       }
     }
     &.mb-180 {
-      margin-bottom: 9.375vw;
+      margin-bottom: 10.375vw;
     }
-   
+    &.mb-150 {
+      margin-bottom: 8.379vw;
+    }
     &.mb-230 {
       margin-bottom: 11.979vw;
     }
@@ -529,6 +583,7 @@ span.bold {
     h4 {
       position: relative;
       z-index: 5;
+      text-transform: uppercase;
       font-size: 2.604vw;
       color: #EFEFEF;
       font-weight: 600;
@@ -821,7 +876,7 @@ span.bold {
       color: #BEF941;
       transform: translate(0%, -50%);
       font-size: 0.833vw;
-      font-family: 'Cera pro', sans-serif;
+      font-family: 'Cera Pro', sans-serif;
       &:before {
         content: '';
         background-color: #151529;
@@ -843,7 +898,7 @@ span.bold {
       margin-bottom: 2.604vw;
     }
     &-button {
-      font-family: 'Cera pro', sans-serif;
+      font-family: 'Cera Pro', sans-serif;
       color: #BEF941;
       text-transform: uppercase;
       text-align: center;
@@ -889,7 +944,7 @@ span.bold {
     justify-content: center;
     gap: 2.604vw;
     color: #EFEFEF;
-    font-family: 'Cera pro', sans-serif;
+    font-family: 'Cera Pro', sans-serif;
     margin-bottom: 5.208vw;
     li {
       text-transform: uppercase;
@@ -955,8 +1010,44 @@ span.bold {
   }
 }
 
-
 //------ FOOTER - END -------
 
 
-@import "media.scss";
+
+// MEDIA 
+
+@media screen and (max-width: 834px) {
+  .wrapper {
+    max-width: 91.727vw;
+  }
+  .header {
+    &__top {
+      padding-top: 4.796vw;
+    }
+    &__logo {
+      width: 13.189vw;
+      height: 7.434vw;
+    }
+    &__nav {
+      display: none;
+    }
+    &__burger {
+      display: block;
+    }
+  }
+  .languages {
+    padding: 1vw 3.597vw;
+    font-size: 1.918vw;
+    line-height: 0.9em;
+    img {
+      width: 1.8vw;
+      height: 0.959vw;
+    }
+  }
+}
+
+@media screen and (max-width: 577px) {
+
+}
+
+// @import "media.scss";
