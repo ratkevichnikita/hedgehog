@@ -16,53 +16,61 @@
   <header class="header">
     <span class="word">Hedgehog</span>
     <div class="header__inner">
-      <div class="wrapper">
-        <div class="header__top">
-          <a class="header__logo" href="#">
-            <img src="./assets//images/icons/logo.svg" alt="Logo">
-          </a>
-          <div class="header__el">
-            <nav class="header__nav">
-              <ul>
-                <li><a href="#solutions" class="go-to">Solutions</a></li>
-                <li><a href="#advantages" class="go-to">Advantages</a></li>
-                <li><a href="#geography" class="go-to">Geography</a></li>
-                <li><a href="#about" class="go-to">About Us</a></li>
-                <li><a href="#contacts" class="go-to">Contacts</a></li>
-              </ul>
-            </nav>
-            <div class="header__box">
-              <div class="languages">
-                <div class="languages__container">
-                  <p class="languages__current">EN</p>
-                  <img src="./assets/images/icons/arrow-down.svg" alt="arrow down">
+      <div class="header__wrapper">
+        <div class="wrapper">
+          <div class="header__top">
+            <a class="header__logo" href="#">
+              <img src="./assets//images/icons/logo.svg" alt="Logo">
+            </a>
+            <div class="header__el">
+              <div class="header__menu">
+                <nav class="header__nav">
+                  <ul>
+                    <li><a href="#solutions" class="go-to">Solutions</a></li>
+                    <li><a href="#advantages" class="go-to">Advantages</a></li>
+                    <li><a href="#geography" class="go-to">Geography</a></li>
+                    <li><a href="#about" class="go-to">About Us</a></li>
+                    <li><a href="#contacts" class="go-to">Contacts</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__box">
+                <div class="languages">
+                  <div class="languages__container">
+                    <p class="languages__current">EN</p>
+                    <img src="./assets/images/icons/arrow-down.svg" alt="arrow down">
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="/">English</a>
+                    </li>
+                    <li>
+                      <a href="/ru.html">Russian</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>
-                    <a href="/">English</a>
-                  </li>
-                  <li>
-                    <a href="/ru.html">Russian</a>
-                  </li>
-                </ul>
+                <div class="header__box-inner">
+                  <a href="#" class="header__contact-us">
+                    Contact us
+                  </a>
+                  <a href="#" class="header__login">
+                    Log in
+                  </a>
+                </div>
               </div>
-              <div class="header__box-inner">
-                <a href="#" class="header__contact-us">
-                  Contact us
-                </a>
-                <a href="#" class="header__login">
-                  Log in
-                </a>
-              </div>
+              <button class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <button class="header__close">
+                <img src="./assets/images/icons/close.svg" alt="close btn">
+              </button>
             </div>
-            <button class="header__burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
           </div>
         </div>
       </div>
+    
     </div>
     <div class="offer">
       <img class="etherium-icon" src="./assets/images/home-etherium-img.svg" alt="etherium icon">
@@ -179,56 +187,66 @@
       <div class="advantages__content">
         <div class="advantages__item">
             <img src="./assets/images/adv-img1.svg" alt="advantages 1">
-            <h4>
-              Conversion boosting payment forms
-            </h4>
-            <p>
-              BWe have designed payment forms in several languages ​​backed by extensive research of user behavior. It guarantees the greatest possible conversion designed for your custom needs.
+            <div class="advantages__item-text">
+              <h4>
+                Conversion boosting payment forms
+              </h4>
+              <p>
+                BWe have designed payment forms in several languages ​​backed by extensive research of user behavior. It guarantees the greatest possible conversion designed for your custom needs.
               </p>
+            </div>
         </div>
          <div class="advantages__item">
             <img src="./assets/images/adv-img2.svg" alt="advantages 2">
-            <h4>
-              Reliable data protection
-            </h4>
-            <p>
-              Your payment details are securely protected with top-tier encryption: audit-proven and compliant with international standards PCI DSS 3.2.1.
-            </p>
+            <div class="advantages__item-text">
+              <h4>
+                Reliable data protection
+              </h4>
+              <p>
+                Your payment details are securely protected with top-tier encryption: audit-proven and compliant with international standards PCI DSS 3.2.1.
+              </p>
+            </div>
         </div>
          <div class="advantages__item">
             <img src="./assets/images/adv-img3.svg" alt="advantages 3">
-            <h4>
-              User-friendly API 
-            </h4>
-            <p>
-              Our cross-functional and intuitive API allows to easily integrate even customers with limited technical capacities. You will be ready to start at a moment's notice.
-            </p>
+            <div class="advantages__item-text">
+              <h4>
+                User-friendly API 
+              </h4>
+              <p>
+                Our cross-functional and intuitive API allows to easily integrate even customers with limited technical capacities. You will be ready to start at a moment's notice.
+              </p>
+            </div>
         </div>
          <div class="advantages__item">
             <img src="./assets/images/adv-img4.png" alt="advanatges - MASS PAYMENT">
-            <h4>Mass Payments
-            </h4>
-            <p>
-              Our global service for card payments has been created for user convenience and is available through API integration or a personal dashboard that is easy to navigate.
-
-            </p>
+            <div class="advantages__item-text">
+              <h4>Mass Payments
+              </h4>
+              <p>
+                Our global service for card payments has been created for user convenience and is available through API integration or a personal dashboard that is easy to navigate.
+              </p>
+            </div>
         </div>
          <div class="advantages__item">
             <img src="./assets/images/adv-img5.svg" alt="advantages 5">
-            <h4>Cascade of Smart Payments</h4>
-            <p>
-              We have developed an innovative cascade of payments based on neural networks. Not only this system finds the best payment channels, but also improves their performance after each transaction.
-
-            </p>
+            <div class="advantages__item-text">
+              <h4>Cascade of Smart Payments</h4>
+              <p>
+                We have developed an innovative cascade of payments based on neural networks. Not only this system finds the best payment channels, but also improves their performance after each transaction.
+              </p>
+            </div>
         </div>
          <div class="advantages__item">
             <img src="./assets/images/adv-img6.svg" alt="advantages 6">
-            <h4>
-              High <br> Conversion Rates
-            </h4>
-            <p>
-              We largely reduce the chance of failed transactions thanks to a wide network of acquiring banks and an AI-driven cascade, which leads to a smoother payment process for everyone.
-            </p>
+            <div class="advantages__item-text">
+              <h4>
+                High <br> Conversion Rates
+              </h4>
+              <p>
+                We largely reduce the chance of failed transactions thanks to a wide network of acquiring banks and an AI-driven cascade, which leads to a smoother payment process for everyone.
+              </p>
+            </div>
         </div>
       </div>
     </div>
@@ -407,8 +425,8 @@
         <li><a href="#about" class="go-to">About Us</a></li>
         <li><a href="#contacts" class="go-to">Contacts</a></li>
       </ul>
-      <span class="footer__word">hedgehog</span>
     </div>
+    <span class="footer__word">hedgehog</span>
     <div class="footer__bottom">
       <div class="wrapper">
         <div class="footer__bottom-inner">
@@ -442,9 +460,9 @@
         spaceBetween: 30,
         allowTouchMove: false,
         breakpoints: {
-          1200: {
-            slidesPerView: 10,
-            spaceBetween: 30
+          834: {
+            slidesPerView: 8,
+            spaceBetween: 15
           },
           992: {
             slidesPerView: 8,
