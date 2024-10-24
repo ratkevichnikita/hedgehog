@@ -225,6 +225,19 @@ $a45: 2.344vw;
       }
     }
   }
+  &__close {
+    display: none;
+    background: transparent;
+    padding: 0;
+    &.active {
+      display: block;
+      width: 5.995vw;
+      height: 5.995vw;
+      position: absolute;
+      right: 5vw;
+      z-index: 10;
+    }
+  }
 }
 
 .offer {
@@ -1109,19 +1122,6 @@ span.bold {
     }
     &__burger {
       display: block;
-    }
-    &__close {
-      display: none;
-      background: transparent;
-      padding: 0;
-      &.active {
-        display: block;
-        width: 5.995vw;
-        height: 5.995vw;
-        position: absolute;
-        right: 5vw;
-        z-index: 10;
-      }
     }
     &__contact-us {
       padding: $a10 $a30;

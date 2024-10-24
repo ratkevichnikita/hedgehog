@@ -312,6 +312,19 @@ body {
 .header__burger span:not(:last-child) {
   margin-bottom: 0.839vw;
 }
+.header__close {
+  display: none;
+  background: transparent;
+  padding: 0;
+}
+.header__close.active {
+  display: block;
+  width: 5.995vw;
+  height: 5.995vw;
+  position: absolute;
+  right: 5vw;
+  z-index: 10;
+}
 
 .offer {
   position: relative;
@@ -1158,19 +1171,6 @@ span.bold {
   }
   .header__burger {
     display: block;
-  }
-  .header__close {
-    display: none;
-    background: transparent;
-    padding: 0;
-  }
-  .header__close.active {
-    display: block;
-    width: 5.995vw;
-    height: 5.995vw;
-    position: absolute;
-    right: 5vw;
-    z-index: 10;
   }
   .header__contact-us {
     padding: 1.199vw 3.597vw;
